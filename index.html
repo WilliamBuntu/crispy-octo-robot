@@ -5,27 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document-Havard</title>
+  <script>
+     document.addEventListener('DOMContentLoaded', ()=>{
 
-    <script>
-        let counter = 0
-        function hello(){
-         
-         document.querySelector('h1').innerHTML = ++counter
-            //document.querySelector('h1').innerHTML = 'Good bye Brother'
-            if ( counter % 5 === 0){
-                alert(`${counter} is a multiple of five`)
-            }
-
+       document.querySelectorAll('button').forEach(button =>{
+        button.onclick = () =>{
+            document.querySelector('h1').style.color = button.dataset.color
         }
-         document.addEventListener('DOMContentLoaded', () =>{
-            document.querySelector('button').onclick = hello
-         })
-        
-    </script>
+       })
+
+     })
+
+  </script>
+
 </head>
 <body>
-    <h1> 0  </h1> 
+    <h1> Hello  </h1>
+
+    <button data-color="red">red</button>
+    <button data-color="blue">blue</button>
+    <button data-color="green">green</button>
+ <!-- <form >
+    <input autofocus placeholder="Name" id="name" type="text">
+    <input type="submit">
+ </form> -->
+
+ <!-- <script src="sandbox.js">
+</script> -->
  <button >Click me </button>
+
     <!-- <script src="hello()"></script> -->
 </body>
 </html>
